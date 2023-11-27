@@ -19,9 +19,13 @@ hexArray.shift();
 
 // this code creates an array which will have 3 elements
 let [red, green, blue] = [
+    //the slice methods is bascially used to extract characters that are found in different parts of the array index
  hexWithoutHash.slice(0, 2),
  hexWithoutHash.slice(2, 4),
  hexWithoutHash.slice(4, 6)
+ //what the mapping method does is that it maps the extracted components to its decimal equivalent using the other method called 'parseInt' with base 16
+ //but why do we do this?
+ //this is done because hexadecimal values need to be converted to decimal values for representing colors in the RGB formate
  ].map(component => parseInt(component, 16));
  
 rgbOutput.value = `rgb(${red}, ${green}, ${blue})`;
